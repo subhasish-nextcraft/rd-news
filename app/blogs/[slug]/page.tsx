@@ -7,6 +7,7 @@ import Link from 'next/link';
 import bloggers from '../bloggers';
 import './blogs.css';
 import getSingleBlog from './getSingleBlog';
+import EmbedVideo from './EmbedVideo';
 
 export const revalidate = 21600;
 
@@ -21,17 +22,21 @@ export default async function page({ params }: Props) {
     notFound();
   }
   const internalLinks: string[] = [];
-  const wholeBlog = parse(blog?.bodyHTML!);
 
-  parse(blog?.bodyHTML!, {
+  const wholeBlog = parse(blog?.bodyHTML!, {
+    // @ts-ignore
     transform(reactNode, domNode) {
       if (
         domNode instanceof Element
         && domNode?.attribs?.id?.startsWith('user-content-')
       ) {
+        if (domNode?.attribs?.id?.startsWith('user-content-video')) {
+          // @ts-ignore
+          return <EmbedVideo embedId={domNode.children[0]?.data} />;
+        }
         internalLinks.push(domNode?.attribs?.id);
       }
-      return <div>{reactNode}</div>;
+      return reactNode;
     },
   });
 
