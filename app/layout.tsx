@@ -33,19 +33,12 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html
       lang="en"
-      className="scrollbar-thumb-pry-400 scrollbar-track-slate-200 scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+      className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-pry-400 scrollbar-track-slate-200"
     >
       <Analytics />
       <body
-        className={`scrollbar-thin font-sans ${montserrat.variable} ${openSans.variable} antialiased`}
+        className={`font-sans ${montserrat.variable} ${openSans.variable} antialiased`}
       >
-        <noscript
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
         <AuthProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
           <Nav />
