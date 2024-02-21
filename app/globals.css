@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+.title {
+  @apply font-open text-4xl font-bold sm:text-5xl text-slate-600 leading-[3.25rem] sm:leading-[3.75rem];
+}
+
+.header {
+  @apply font-open text-3xl font-bold text-slate-700 leading-[2.75rem];
+}
+
+.subheader {
+  @apply font-open text-lg font-bold text-slate-700 leading-[1.55rem];
+}
+
+p {
+  @apply text-slate-800 text-lg;
+}

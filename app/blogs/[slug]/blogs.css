@@ -1,0 +1,24 @@
+.blogContent {
+  @apply text-slate-800 text-lg scroll-mt-20;
+}
+.blogContent h2 {
+  @apply !font-bold !text-slate-700 !text-xl mb-3;
+}
+.blogContent h3 {
+  @apply !font-medium !text-slate-700 !text-xl mb-2;
+}
+.blogContent p {
+  @apply !text-slate-800 mb-4;
+}
+.blogContent ul {
+  @apply !list-disc mx-4 my-4;
+}
+.blogContent li {
+  @apply mb-2;
+}
+.blogContent section {
+  @apply mb-6;
+}
+.blogContent em {
+  @apply font-open italic;
+}
