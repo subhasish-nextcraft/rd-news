@@ -22,3 +22,9 @@
 .blogContent em {
   @apply font-open italic;
 }
+.blogContent img {
+  @apply rounded-xl mx-auto my-6;
+}
+.blogContent iframe {
+  @apply rounded-xl mx-auto my-6 max-w-xl;
+}

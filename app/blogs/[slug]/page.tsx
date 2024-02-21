@@ -1,13 +1,12 @@
 import parse, { Element } from 'html-react-parser';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Blogs from 'section/home/Blogs';
 import CTA from 'section/home/CTA';
 import Pic from 'util/Pic';
-import Link from 'next/link';
 import bloggers from '../bloggers';
 import './blogs.css';
 import getSingleBlog from './getSingleBlog';
-import EmbedVideo from './EmbedVideo';
 
 export const revalidate = 21600;
 
@@ -31,8 +30,17 @@ export default async function page({ params }: Props) {
         && domNode?.attribs?.id?.startsWith('user-content-')
       ) {
         if (domNode?.attribs?.id?.startsWith('user-content-video')) {
-          // @ts-ignore
-          return <EmbedVideo embedId={domNode.children[0]?.data} />;
+          return (
+            <iframe
+              // @ts-ignore
+              title={`video ${domNode.children[0]?.data}`}
+              className="min-h-[12rem] sm:min-h-[15rem] lg:min-h-[18rem] rounded-2xl"
+              width="100%"
+              height="100%"
+              // @ts-ignore
+              src={`https://www.youtube.com/embed/${domNode.children[0]?.data}`}
+            />
+          );
         }
         internalLinks.push(domNode?.attribs?.id);
       }
