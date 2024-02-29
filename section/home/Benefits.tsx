@@ -3,7 +3,7 @@ import Section from 'ui/Section';
 function SideComp1() {
   return (
     <h2 className="header !text-white">
-      Client Satisfaction and Smooth User Experience with Mooncoder&apos;s
+      Client Satisfaction and Smooth User Experience with Dailyrush&apos;s
       Services
     </h2>
   );
@@ -12,7 +12,7 @@ function SideComp1() {
 function SideComp2() {
   return (
     <p className="text-white">
-      At Mooncoder, we prioritize client satisfaction and strive to provide a
+      At Dailyrush, we prioritize client satisfaction and strive to provide a
       seamless user experience. Our team utilizes the latest Next.js and React
       frameworks to develop high-quality websites that meet our clients&apos;
       needs. You can expect user-friendly interfaces, fast loading times, and

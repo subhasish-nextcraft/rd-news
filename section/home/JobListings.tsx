@@ -91,7 +91,7 @@ export default function JobListings() {
         <div className="px-4">
           <h2 className="header mb-2 w-full">We&apos;re hiring!</h2>
           <p className="mb-3">
-            Explore the exciting job opportunities at Mooncoder.
+            Explore the exciting job opportunities at Dailyrush.
           </p>
 
           <OpenJobs />

@@ -48,9 +48,9 @@ export default function Nav() {
           <div className="container mx-auto flex justify-between gap-4 items-center h-full px-4">
             <Link href="/">
               <div className="flex gap-2 items-center">
-                <div className="relative rounded-full overflow-hidden flex-none">
+                <div className="relative rounded-full overflow-hidden flex-none bg-white">
                   <img
-                    className="h-10 w-10"
+                    className="h-9 w-9"
                     src="/global/logo.svg"
                     alt=""
                   />
@@ -58,7 +58,7 @@ export default function Nav() {
                 <img
                   src="/global/logo-text-pry.svg"
                   alt="logo"
-                  className="h-10"
+                  className="h-6 sm:h-7 mt-1"
                 />
               </div>
             </Link>

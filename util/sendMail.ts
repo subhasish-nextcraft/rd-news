@@ -19,7 +19,7 @@ const postData = ({
 
   return {
     sender: {
-      name: 'Mooncoder Team',
+      name: 'Dailyrush Team',
       email: 'subhasish.nextcraft@gmail.com',
     },
     to: [
@@ -34,7 +34,7 @@ const postData = ({
       details,
     })}<p style="margin:0">Sincerely,</p>
     <p style="margin:0">Subhasish Das</p>
-    <p style="margin:0">Mooncoder developers team</p>
+    <p style="margin:0">Dailyrush developers team</p>
     <p style="margin:0"><a href="https://nextcraft.dev" target="_blank">nextcraft.dev</a></p>
     <a href="https://nextcraft.dev" target="_blank">
       <div style="display:flex; align-items:center; margin-top:1.5rem; gap:0.5rem">
@@ -45,7 +45,7 @@ const postData = ({
         />
         <img
           src="https://nextcraft-site-git-landing-page-subhasish-das-projects.vercel.app/global/logo-text-pry.png"
-          alt="Mooncoder"
+          alt="Dailyrush"
           style="height:2.5rem; margin-top:0.75rem"
         />
       </div>

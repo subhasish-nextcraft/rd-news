@@ -6,7 +6,7 @@ const emailTemplates = ({
   switch (template) {
     case 'lead-submitted':
       return {
-        header: 'Confirming Your Web Development details - Mooncoder',
+        header: 'Confirming Your Web Development details - Dailyrush',
         content: ({
           clientName,
           details,
@@ -32,14 +32,14 @@ const emailTemplates = ({
 
     case 'received-job-application':
       return {
-        header: 'Thank You for applying at Mooncoder',
+        header: 'Thank You for applying at Dailyrush',
         content: ({ clientName }: LeadSubmissionTemplateProps) => `<p>Hello ${
           clientName.split(' ')[0]
-        },</p><p>Thank you for applying to Mooncoder. We appreciate the time and effort you invested in submitting your application.</p>
+        },</p><p>Thank you for applying to Dailyrush. We appreciate the time and effort you invested in submitting your application.</p>
         <p><b>Your application is now in the hands of our dedicated Human Resources team, who will carefully review your qualifications and experience. We understand the importance of this process to you, and we assure you that your application will be given the attention it deserves.
         </b></p>
         <p>Please be patient as our team works diligently to assess each candidate thoroughly. We will contact you soon regarding the status of your application. In the meantime, if there are any significant updates or if we require additional information, we will reach out to you promptly.</p>
-        <p>We value your interest in joining our team and look forward to the possibility of working together. If you have any questions or need further assistance, feel free to reach out to our HR department at subhasish.Mooncoder@gmail.com</p>
+        <p>We value your interest in joining our team and look forward to the possibility of working together. If you have any questions or need further assistance, feel free to reach out to our HR department at subhasish.Dailyrush@gmail.com</p>
         <p>Best Regards,</p>`,
       };
 

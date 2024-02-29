@@ -7,7 +7,7 @@ function SideComp() {
         Leverage the potential of Next.js and React for Your Website
       </h2>
       <p>
-        At Mooncoder, we use Next.js and React to create stunning,
+        At Dailyrush, we use Next.js and React to create stunning,
         high-performing websites. Our expertise guarantees visually appealing,
         fast, user-friendly sites, taking your web development to the next
         level.

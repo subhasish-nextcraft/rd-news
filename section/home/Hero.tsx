@@ -4,7 +4,7 @@ import ContactModalButton from './ContactModalButton';
 function SideComp() {
   return (
     <>
-      <h1 className="title mb-6">Lift your business online with Mooncoder</h1>
+      <h1 className="title mb-6">Lift your business online with Dailyrush</h1>
       <p>
         We use Next.js and React to create high-performing websites with a focus
         on client satisfaction and user-friendly experiences.
