@@ -37,7 +37,7 @@ export default async function RootLayout({ children }: Props) {
     >
       <Analytics />
       <body
-        className={`font-sans ${montserrat.variable} ${openSans.variable} antialiased`}
+        className={`font-sans ${montserrat.variable} ${openSans.variable} antialiased print:bg-secondary`}
       >
         <AuthProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
