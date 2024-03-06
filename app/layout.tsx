@@ -42,14 +42,14 @@ export default async function RootLayout({ children }: Props) {
         <AuthProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
           <Nav />
-          <div className="min-h-screen flex flex-col justify-between">
-            {/* <TopWrapper> */}
+          <div className="min-h-screen flex flex-col justify-between bg-slate-50">
             <div className="flex relative">
               <CategoryMenu />
-              {children}
+              <div className="pt-[4.75rem] min-h-screen md:pt-[5.5rem] lg:pt-[6.5rem] pb-[0.75rem] md:pb-[1.5rem] lg:pb-[2.5rem]">
+                {children}
+              </div>
             </div>
             <div id="mainModalContainer" />
-            {/* </TopWrapper> */}
             <Footer />
           </div>
         </AuthProvider>

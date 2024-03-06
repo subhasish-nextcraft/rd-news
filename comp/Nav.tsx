@@ -3,14 +3,11 @@
 import { isSidebarOpenAtom } from 'context/atoms';
 import {
   AnimatePresence,
-  useMotionValueEvent,
-  useScroll,
   motion,
 } from 'framer-motion';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 
 const navLinks = [
   { route: '/', label: 'Home' },
@@ -33,9 +30,9 @@ export default function Nav() {
         <div className="max-w-7xl mx-auto h-full">
           <div className="container mx-auto flex justify-between gap-4 items-center h-full px-4">
             <Link href="/">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-1 sm:gap-2 items-center">
                 <div className="relative rounded-full overflow-hidden flex-none bg-white">
-                  <img className="h-9 w-9" src="/global/logo.svg" alt="" />
+                  <img className="size-6 sm:size-7" src="/global/logo.svg" alt="" />
                 </div>
                 <img
                   src="/global/logo-text-pry.svg"
