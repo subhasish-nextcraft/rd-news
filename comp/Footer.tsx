@@ -27,11 +27,7 @@ export default function Footer() {
             <Link href="/">
               <div className="flex gap-2 items-center">
                 <div className="relative rounded-full overflow-hidden flex-none bg-white">
-                  <img
-                    className="h-9 w-9"
-                    src="/global/logo.svg"
-                    alt=""
-                  />
+                  <img className="h-9 w-9" src="/global/logo.svg" alt="" />
                 </div>
                 <img
                   src="/global/logo-text-white.svg"
