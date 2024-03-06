@@ -39,9 +39,14 @@ export default function CategoryMenu() {
   const [isCategorybarOpen, setIsCategorybarOpen] = useAtom(
     isCategorybarOpenAtom,
   );
+
   return (
     <div className="flex sticky h-full top-0 left-0 w-[16rem]">
-      <div className="w-full transition-all overflow-hidden bg-secondary">
+      <div
+        className={`${
+          isCategorybarOpen ? 'w-full' : 'w-0'
+        } transition-all overflow-hidden bg-secondary`}
+      >
         <SidebarThreads />
       </div>
       <button
