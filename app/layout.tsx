@@ -1,13 +1,12 @@
-import AuthProvider from 'context/AuthProvider';
+import CategoryMenu from 'comp/CategoryMenu';
 import Footer from 'comp/Footer';
 import Nav from 'comp/Nav';
+import AuthProvider from 'context/AuthProvider';
 import { Montserrat, Open_Sans } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Toaster } from 'react-hot-toast';
-import TopWrapper from 'util/TopWrapper';
-import './globals.css';
 import Analytics from 'util/Analytics';
-import CategoryMenu from 'comp/CategoryMenu2';
+import './globals.css';
 
 type Props = {
   children?: ReactNode;
@@ -42,7 +41,7 @@ export default async function RootLayout({ children }: Props) {
       >
         <AuthProvider>
           <Toaster position="bottom-center" reverseOrder={false} />
-          {/* <Nav /> */}
+          <Nav />
           <div className="min-h-screen flex flex-col justify-between">
             {/* <TopWrapper> */}
             <div className="flex relative">

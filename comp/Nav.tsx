@@ -21,39 +21,21 @@ const navLinks = [
 ];
 
 export default function Nav() {
-  const { scrollYProgress } = useScroll();
-  const [isTop, setIsTop] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useAtom(isSidebarOpenAtom);
 
   const pathname = usePathname();
 
-  console.log('pathname', pathname);
-
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (latest === 0) {
-      setIsTop(true);
-    } else {
-      setIsTop(false);
-    }
-  });
-
   return (
     <>
       <div
-        className={`${
-          !isTop && 'shadow-md bg-white'
-        } fixed top-0 h-[4rem] w-full z-40 transition`}
+        className="shadow-md bg-white fixed top-0 h-[4rem] w-full z-40 transition"
       >
         <div className="max-w-7xl mx-auto h-full">
           <div className="container mx-auto flex justify-between gap-4 items-center h-full px-4">
             <Link href="/">
               <div className="flex gap-2 items-center">
                 <div className="relative rounded-full overflow-hidden flex-none bg-white">
-                  <img
-                    className="h-9 w-9"
-                    src="/global/logo.svg"
-                    alt=""
-                  />
+                  <img className="h-9 w-9" src="/global/logo.svg" alt="" />
                 </div>
                 <img
                   src="/global/logo-text-pry.svg"
