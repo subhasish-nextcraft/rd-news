@@ -41,12 +41,12 @@ export default function CategoryMenu() {
   );
 
   return (
-    <div className="flex sticky h-full top-0 left-0 w-[16rem]">
-      <div
-        className={`${
-          isCategorybarOpen ? 'w-full' : 'w-0'
-        } transition-all overflow-hidden bg-secondary`}
-      >
+    <div
+      className={`${
+        isCategorybarOpen ? 'w-[16rem]' : 'w-6'
+      } flex sticky h-full transition-all top-0 left-0`}
+    >
+      <div className="overflow-hidden bg-secondary">
         <SidebarThreads />
       </div>
       <button
