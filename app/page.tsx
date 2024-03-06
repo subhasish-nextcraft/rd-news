@@ -29,7 +29,7 @@ export default function page() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-16">
           {[...Array(10)].map(() => (
-            <div className="col-span-1 rounded-xl bg-white shadow p-6">
+            <div className="col-span-1 rounded-3xl bg-white shadow p-6">
               <EachNewsCard />
             </div>
           ))}
