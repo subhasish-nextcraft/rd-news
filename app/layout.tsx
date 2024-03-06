@@ -43,9 +43,14 @@ export default async function RootLayout({ children }: Props) {
           <Toaster position="bottom-center" reverseOrder={false} />
           <Nav />
           <div className="min-h-screen flex flex-col justify-between bg-slate-50">
-            <div className="flex relative">
+            <div className="fixed md:hidden z-20">
               <CategoryMenu />
-              <div className="pt-[4.75rem] min-h-screen md:pt-[5.5rem] lg:pt-[6.5rem] pb-[0.75rem] md:pb-[1.5rem] lg:pb-[2.5rem]">
+            </div>
+            <div className="flex relative">
+              <div className="mdDown:hidden sticky h-full top-0 left-0">
+                <CategoryMenu />
+              </div>
+              <div className="pt-[4.75rem] min-h-screen md:pt-[5.5rem] lg:pt-[6.5rem] pb-[0.75rem] md:pb-[1.5rem] lg:pb-[2.5rem] mx-auto">
                 {children}
               </div>
             </div>

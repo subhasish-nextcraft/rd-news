@@ -12,6 +12,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        mdDown: { max: '768px' },
+        // => @media (min-width: 992px) { ... }
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

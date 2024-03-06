@@ -1,5 +1,5 @@
 import Section from 'ui/Section';
-import ContactModalButton from './ContactModalButton';
+// import ContactModalButton from './ContactModalButton';
 
 function SideComp() {
   return (
@@ -10,7 +10,7 @@ function SideComp() {
         on client satisfaction and user-friendly experiences.
       </p>
       <div className="mt-8">
-        <ContactModalButton />
+        {/* <ContactModalButton /> */}
       </div>
     </>
   );
