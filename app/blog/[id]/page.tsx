@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // import RelatedPost from 'components/Blog/RelatedPost';
+import Categories from 'comp/Categories';
 import SharePost from 'components/Blog/SharePost';
 
 async function fetchBlog(id: number) {
@@ -89,29 +90,12 @@ async function page({ params }: any) {
               </form>
             </div>
 
-            <Categories categories={categories} />
-            
-            {/* <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
+            <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
               <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">Categories</h4>
-
               <ul>
-                <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                  <Link href="/blog">Blog</Link>
-                </li>
-                <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                  <Link href="/blog">Events</Link>
-                </li>
-                <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                  <Link href="/blog">Grids</Link>
-                </li>
-                <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                  <Link href="/blog">News</Link>
-                </li>
-                <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                  <Link href="/blog">Rounded</Link>
-                </li>
+                <Categories categories={categories} />
               </ul>
-            </div> */}
+            </div>
 
             {/* <RelatedPost /> */}
           </div>
