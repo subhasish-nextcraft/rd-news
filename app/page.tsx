@@ -1,40 +1,76 @@
-import Button from 'ui/Button';
-import Pic from 'util/Pic';
+import { Metadata } from 'next';
 
-function EachNewsCard() {
-  return (
-    <div className="">
-      <div className="h-[17rem] w-full rounded-xl overflow-hidden">
-        <Pic src="/home/robot.webp" alt="sample" objectFit="cover" />
-      </div>
-      <p className="header mb-2 mt-4">
-        Amazon Unveils Humanoid Robot &apos;Digit&apos; At Warehouse
-      </p>
-      <p className="line-clamp-3 mb-6">
-        Amazon.com Inc (NASDAQ:AMZN) has introduced a humanoid robot,
-        &apos;Digit,&apos; at a warehouse near Seattle, offering a glimpse into
-        the potential future of work. What Happened: The 5-foot-9-inch robot,
-        developed by Agility Robotics Inc., is designed to perform a repetitive
-        task of moving empty yellow bins from a shelf to a conveyor, reported
-        Bloomberg on Sunday.
-      </p>
-      <Button>Read More</Button>
-    </div>
-  );
-}
+import Hero from 'components/Hero/page';
+import Brands from 'components/Brands/page';
+import Feature from 'components/Features/page';
+import About from 'components/About/page';
+import FeaturesTab from 'components/FeaturesTab/page';
+import FunFact from 'components/FunFact/page';
+import Integration from 'components/Integration/page';
+import CTA from 'components/CTA/page';
+import FAQ from 'components/FAQ/page';
+import Pricing from 'components/Pricing/page';
+import Contact from 'components/Contact/page';
+// import Blog from 'components/Blog/page';
+import Testimonial from 'components/Testimonial';
+// import Categories from 'comp/Categories';
 
-export default function page() {
+export const metadata: Metadata = {
+  title: 'Zinfo-Media News',
+  description: 'This is Home page for Zinfo-Media',
+};
+
+// async function fetchCategories() {
+//   const options = {
+//     headers: {
+//       Authorization: `Bearer ${process.env.BACKEND_API_KEY}`,
+//     },
+//   };
+//   try {
+//     const res = await fetch('http://localhost:1337/api/categories', options);
+//     const response = await res.json();
+//     return response;
+//   } catch (err) {
+//     console.log(err);
+//   }
+
+//   return null; // Add a return statement at the end of the function
+// }
+
+// async function fetchBlogs() {
+//   const options = {
+//     headers: {
+//       Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
+//     },
+//   };
+//   try {
+//     const res = await fetch('http://localhost:1337/api/blogs?populate=*', options);
+//     const response = await res.json();
+//     return response;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+export default async function Home() {
+//   const categories = await fetchCategories();
+  //   const blogs = await fetchBlogs();
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16">
-          {[...Array(10)].map(() => (
-            <div className="col-span-1 rounded-3xl bg-white shadow p-6">
-              <EachNewsCard />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <main>
+      <Hero />
+      <Brands />
+      <Feature />
+      <About />
+      <FeaturesTab />
+      <FunFact />
+      <Integration />
+      <CTA />
+      <FAQ />
+      <Testimonial />
+      <Pricing />
+      <Contact />
+      {/* <Blogs blogs={blogs} /> */}
+      {/* <Categories categories={categories} /> */}
+    </main>
   );
 }
